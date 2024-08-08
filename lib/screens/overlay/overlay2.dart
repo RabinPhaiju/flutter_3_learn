@@ -55,6 +55,7 @@ class _Overlay2State extends State<Overlay2> {
             SizedBox(height: 20,child: Text('Hello'),),
             SizedBox(height: 20,child: Text('Hello'),),
             Stack(
+              clipBehavior: Clip.none,
                 children:[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -99,7 +100,14 @@ class _Overlay2State extends State<Overlay2> {
                   Positioned(
                       bottom:0,
                       left:0,
-                      child:Text('bottom')
+                      child:Column(
+                        children: [
+                          Text('one'),
+                          Text('two'),
+                          Text('three'),
+                          Text('four'),
+                        ],
+                      )
                   )
                 ]
             ),

@@ -5,8 +5,10 @@ import 'package:flutter_learn_377/screens/cat_animation.dart';
 import 'package:flutter_learn_377/screens/count_down.dart';
 import 'package:flutter_learn_377/screens/expense_tracker/expense_tracker.dart';
 import 'package:flutter_learn_377/screens/overlay/overlay_page.dart';
+import 'package:flutter_learn_377/screens/pocket_dropdown.dart';
 import 'package:flutter_learn_377/screens/rotate_widget.dart';
 import 'package:flutter_learn_377/screens/splash_screen2/splash.dart';
+import 'package:flutter_learn_377/screens/testing.dart';
 import 'package:flutter_learn_377/sqflite.dart';
 import 'package:flutter_learn_377/url_launcher.dart';
 import 'jsonimage/jsonimage.dart';
@@ -140,6 +142,22 @@ class _HomePageState extends State<HomePage> {
                   );
                 }, child: const Text("Overlay",),
               ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const TestingWidget()),
+                  );
+                }, child: const Text("Testing",),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PocketDropdown()),
+                  );
+                }, child: const Text("Pocket Dropdown",),
+              )
             ],
           ),
         ),
